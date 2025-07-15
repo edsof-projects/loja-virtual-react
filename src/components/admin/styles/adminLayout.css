@@ -4,6 +4,7 @@
 }
 
 .adminlayout .top{
+    width: calc(100% - 302px);
     display: flex;
     flex-direction: column;
     flex: 1;

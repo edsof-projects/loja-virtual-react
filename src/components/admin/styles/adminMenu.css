@@ -1,9 +1,10 @@
 .adminmenu{
     position: fixed;
     width: 300px;
-    height: 100%;
+    height: 100vh;
     background: linear-gradient(180deg, var(--lilas), var(--azul));
     border-left: 10px solid var(--azul);
+    transition: 2.2s;
     overflow: hidden;
 }
 
@@ -17,11 +18,10 @@
 .adminmenu ul li{
     position: relative;
     width: 100%;
-    padding: 10px 20px;
     list-style: none;    
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
-    transition: .5s;
+    padding: 10px 20px;
 }
 
 .adminmenu ul li:hover{
@@ -36,7 +36,7 @@
 .adminmenu ul li img{
     width: 120px;
     margin-left: 75px;
-    transition: 0.5s;
+    transition: 2.2s;
 }
 
 .adminmenu ul li a{
@@ -61,4 +61,30 @@
     height: 60px;
     line-height: 70px;
     white-space: nowrap;
+}
+
+.adminmenu ul li:hover a::before{
+    content: '';
+    background: transparent;
+    position: absolute;
+    top: -50px;
+    right: 0;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 10px var(--branco);
+    pointer-events: none;
+}
+
+.adminmenu ul li:hover a::after{
+    content: '';
+    background: transparent;
+    position: absolute;
+    bottom:  -50px;
+    right: 0;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    box-shadow: 35px -28px 0 10px var(--branco);
+    pointer-events: none;
 }
